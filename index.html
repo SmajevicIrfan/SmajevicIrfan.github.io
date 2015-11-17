@@ -42,7 +42,7 @@
 			if (QueryString !== -1) {
 				var id = QueryString;
 				
-				$.getJSON("https://www.googleapis.com/youtube/v3/videos?id=" + id + "&key=AIzaSyDc__9ZMCmuJAbJ6lzA1lubpQ7bqo40Fyc%20&fields=items(id,snippet(publishedAt,channelId,title,channelTitle,tags,categoryId),statistics)&part=snippet,statistics", function(data) {
+				$.getJSON("https://www.googleapis.com/youtube/v3/videos?id=" + id + "&key=AIzaSyDHt0otoPVwvQGPVxZYDN6bIon36DVHEZc%20&fields=items(id,snippet(publishedAt,channelId,title,channelTitle,tags,categoryId),statistics)&part=snippet,statistics", function(data) {
 					$("#result").append('<pre>' + JSON.stringify(data.items[0], null, 4) + '</pre>');
 				});
 			}
