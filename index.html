@@ -41,8 +41,9 @@
 			
 			if (QueryString !== -1) {
 				var id = QueryString;
+				var key = "AIzaSyBhF7mV-OnW-erbq5gmRY5tGoHMrJnFfzM";
 				
-				$.getJSON("https://www.googleapis.com/youtube/v3/videos?id=" + id + "&key=AIzaSyDHt0otoPVwvQGPVxZYDN6bIon36DVHEZc%20&fields=items(id,snippet(publishedAt,channelId,title,channelTitle,tags,categoryId),statistics)&part=snippet,statistics", function(data) {
+				$.getJSON("https://www.googleapis.com/youtube/v3/videos?id=" + id + "&key=" + key + "%20&fields=items(id,snippet(publishedAt,channelId,title,channelTitle,tags,categoryId),statistics)&part=snippet,statistics", function(data) {
 					$("#result").append('<pre>' + JSON.stringify(data.items[0], null, 4) + '</pre>');
 				});
 			}
