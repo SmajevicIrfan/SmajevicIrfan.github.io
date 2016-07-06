@@ -9,7 +9,7 @@ body {
 	align-items: center;
 
 	width: 100%;
-	height: calc(100vh - 100px);
+	min-height: calc(100vh - 100px);
 	margin: 50px 0;
 
 	font-family: "fira-sans";

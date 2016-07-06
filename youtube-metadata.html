@@ -100,7 +100,7 @@
           $("#id").append(meta.id);
           $("#publishedAt").append(meta.snippet.publishedAt);
           $("#channel").append('<a href="https://www.youtube.com/channel/' +  meta.snippet.channelId + '">' + meta.snippet.channelTitle + '</a>');
-          $("#tags").append(meta.snippet.tags);
+          $("#tags").append(JSON.stringify(meta.snippet.tags, null, 4));
           $("#category").append(meta.snippet.categoryId);
 
           $("#views").append(meta.statistics.viewCount);
