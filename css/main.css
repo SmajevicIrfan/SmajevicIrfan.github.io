@@ -9,7 +9,7 @@ body {
 	align-items: center;
 
 	width: 100%;
-	height: calc(100% - 100px);
+	height: calc(100vh - 100px);
 	margin: 50px 0;
 
 	font-family: "fira-sans";
@@ -25,6 +25,10 @@ body {
 * {
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+}
+
+hr {
+	margin: 2px 0;
 }
 
 #wrapper {
@@ -81,8 +85,22 @@ body {
 	background-image: url("../img/youtube-metadata.svg");
 }
 
+#result hr:first-of-type {
+	margin: 20px 0;
+}
+
+label,
+.label {
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
 #yt-link,
 #submit {
 	margin: 2px 0;
 	width: 100%;
+}
+
+.section-break {
+	margin-bottom: 20px;
 }
