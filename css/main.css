@@ -32,6 +32,8 @@ hr {
 }
 
 #wrapper {
+	display: flex;
+
 	max-width: 80%;
 	margin: 0 auto;
 
@@ -83,6 +85,12 @@ hr {
 
 #youtube-metadata {
 	background-image: url("../img/youtube-metadata.svg");
+}
+
+#irc-chat {
+	background-image: url("../img/irc-chat-logo.svg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 #result hr:first-of-type {
