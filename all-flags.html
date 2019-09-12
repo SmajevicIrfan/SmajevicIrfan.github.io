@@ -14,7 +14,8 @@
 		flagsRequest.onreadystatechange = function() {
 			if (flagsRequest.readyState === 4) {
 				const flagsContents = document.createElement('html');
-				flagsContents.innerHTML = `<body>${flagsRequest.responseText}</body>`
+				flagsContents.innerHTML = `<html><body>${flagsRequest.responseText}</body></html>`
+
 				console.log(flagsContents.getElementsByTagName('Key')[0]);
 			}
 		};
