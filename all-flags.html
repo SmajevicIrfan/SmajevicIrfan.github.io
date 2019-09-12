@@ -28,10 +28,13 @@
 					const div = document.createElement('div');
 					const img = document.createElement('img');
 					img.src = `https://owly.fra1.digitaloceanspaces.com/${flagData.innerHTML.replace('\\', '/')}`;
+
+					const p = document.createElement('p');
 					const name = document.createTextNode(arr[1]);
+					p.appendChild(name);
 
 					div.appendChild(img);
-					div.appendChild(name);
+					div.appendChild(p);
 					container.appendChild(div);
 				}
 			}
