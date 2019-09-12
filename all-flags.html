@@ -21,7 +21,7 @@
 				console.log(flagsContents.getElementsByTagName('Key')[0]);
 				for (flagData of flagsContents.getElementsByTagName('Key')) {
 					const arr = flagData.innerHTML.split('/');
-					if (arr[0] !== 'flags' || arr.length !== 2) {
+					if (arr[0] !== 'flags' || arr.length !== 2 || arr[1] === '') {
 						continue;
 					}
 
@@ -29,9 +29,9 @@
 					const img = document.createElement('img');
 					img.src = `https://owly.fra1.digitaloceanspaces.com/${flagData.innerHTML.replace('\\', '/')}`;
 
-					const p = document.createElement('p');
+					const h2 = document.createElement('h2');
 					const name = document.createTextNode(arr[1]);
-					p.appendChild(name);
+					h2.appendChild(name);
 
 					div.appendChild(img);
 					div.appendChild(p);
