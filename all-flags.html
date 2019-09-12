@@ -19,7 +19,7 @@
 				flagsContents.innerHTML = `<html><body>${flagsRequest.responseText}</body></html>`
 
 				console.log(flagsContents.getElementsByTagName('Key')[0]);
-				for (flagData of flagsContents) {
+				for (flagData of flagsContentsgetElementsByTagName('Key')) {
 					const div = document.createElement('div');
 					const img = document.createElement('img');
 					img.src = `https://owly.fra1.digitaloceanspaces.com/${flagData.innerHTML.replace('\\', '/')}`;
