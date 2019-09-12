@@ -7,7 +7,9 @@
 	<title>All Flags for Owlypia</title>
 </head>
 <body>
+	<div id="container"></div>
 	<script>
+		const container = document.getElementById('container')
 		const flagsRequest = new XMLHttpRequest();
 		flagsRequest.open('GET', 'https://owly.fra1.digitaloceanspaces.com/');
 
@@ -23,6 +25,7 @@
 					img.src = `https://owly.fra1.digitaloceanspaces.com/${flagData.innerHTML.replace('\\', '/')}`;
 
 					div.appendChild(img);
+					container.appendChild(div);
 				}
 			}
 		};
