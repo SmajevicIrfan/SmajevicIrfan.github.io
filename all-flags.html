@@ -20,11 +20,18 @@
 
 				console.log(flagsContents.getElementsByTagName('Key')[0]);
 				for (flagData of flagsContents.getElementsByTagName('Key')) {
+					const arr = flagData.innerHTML.split('/');
+					if (arr[0] !== 'flags' || arr.length !== 2) {
+						continue;
+					}
+
 					const div = document.createElement('div');
 					const img = document.createElement('img');
 					img.src = `https://owly.fra1.digitaloceanspaces.com/${flagData.innerHTML.replace('\\', '/')}`;
+					const name = document.createTextNode(arr[1]);
 
 					div.appendChild(img);
+					div.appendChild(name);
 					container.appendChild(div);
 				}
 			}
